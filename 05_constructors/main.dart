@@ -1,3 +1,5 @@
+import 'named_constructor.dart';
+
 main() {
   var s = Sub();
   print(s.runtimeType);
@@ -8,6 +10,10 @@ main() {
   var si = Sub.Init(5, 10);
   print(si.runtimeType);
   print(si.x);
+
+  // From other file
+  print('1 hour in minutes; ${NamedConstConstructor(hours: 1).inMinutes}');
+  print('34 minutes in seconds: ${NamedConstConstructor(minutes: 34).inSeconds}');
 }
 
 class Super {
